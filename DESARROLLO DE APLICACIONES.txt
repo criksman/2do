@@ -12,7 +12,7 @@ widget -> StatelessWidget
 
 Investigar los componentes del scaffold
 
-despues del title poner leading (dentro deL scaffold/AppBar): leading: Icon(Icons.home)
+despues del title poner leading (dentro deL scaffold/AppBar): leading: Icon(Icons.home) -> para poner iconos
 
 Dentro de MaterialApp (home: const MyHomePage(title: 'I Love: ') -> se puede editar el titulo.
 
