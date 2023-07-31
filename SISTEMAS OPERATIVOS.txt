@@ -1,0 +1,25 @@
+Lunes 04 Septiembre - 1° Prueba - 30%
+Lunes 16 Octubre - 2° Prueba - 35%
+Lunes 20 Noviembre - 3° Prueba - 35%
+Repechaje Lunes 27 Noviembre
+
+probar https://academy.hackthebox.com/
+
+--------------------------
+
+SISTEMA OPERATIVO
+
+Software que permite la interacción entre el usuario y el hardware, en otras palabras tiene una función de traductor.
+
+- Función: Se encarga de gestionar el hardware y los recursos.
+
+PILA OSI (Investigar)
+
+- Que tiene el S.O:
+  .Sistema de archivos: Software que gestiona como se guardan los archivos en el sistema.
+  .Interpretación de comandos:
+  .Núcleo:
+
+- Tipos:
+  .Para clientes: (Investigar)
+  .Para servidores: Para entregar servicios, herramientas, etc a los usuarios como compartir recursos, gestionar redes y hardware.
