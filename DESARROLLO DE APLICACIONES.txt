@@ -14,6 +14,8 @@ Investigar los componentes del scaffold
 
 despues del title poner leading (dentro deL scaffold/AppBar): leading: Icon(Icons.home)
 
+Dentro de MaterialApp (home: const MyHomePage(title: 'I Love: ') -> se puede editar el titulo.
+
 Arriba en MaterialApp poner: debugShowCheckedModeBanner:false para sacar la marca de agua de debug.
 
 analysis_options.yaml -> rules -> prefer_const_constructor para evitar poner const todo el rato.
