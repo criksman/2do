@@ -1,0 +1,19 @@
+1) Inicializar proyecto: CTRL + SHIFT + P -> Escribir Flutter -> Seleccionar New Project -> Seleccionar Application -> Seleccionar Lugar sin nombre -> Poner nombre
+
+2) Ejecutar proyecto: Android Studio -> more actions -> Virtual device manager -> Create device (Phonearena.com para especificaciones de un celular) -> pixel 6 pro -> next
+                      CTRL + SHIFT + P -> Seleccionar mobile emulator -> dentro de archivo dart (el directorio no debe tener carácteres especiales) fn + f5. Para detener depuracion clickear boton stop.
+
+                      Para un proyecto flutter descargado -> flutter pub get en el terminal
+
+3) X:\new project\flutter_app_1\android\app\src\main\AndroidManifest.xml -> android:label="Nombre de la app" -> android:icon="directorio de imagen se encuentran en la carpeta res"
+
+widget -> StatelessWidget
+        ->StatefulWidget
+
+Investigar los componentes del scaffold
+
+despues del title poner leading (dentro deL scaffold/AppBar): leading: Icon(Icons.home)
+
+Arriba en MaterialApp poner: debugShowCheckedModeBanner:false para sacar la marca de agua de debug.
+
+analysis_options.yaml -> rules -> prefer_const_constructor para evitar poner const todo el rato.
