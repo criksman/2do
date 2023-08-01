@@ -9,17 +9,32 @@ probar https://academy.hackthebox.com/
 
 SISTEMA OPERATIVO
 
-Software que permite la interacción entre el usuario y el hardware, en otras palabras tiene una función de traductor.
+- Descripción: Software que permite la interacción entre el usuario y el hardware, en otras palabras tiene una función de traductor (acciones del usuario a acciones binarias (0 y 1))
 
 - Función: Se encarga de gestionar el hardware y los recursos.
 
+- Sistemas operativos conocidos: Linux, windows, android, mac, DOS (disk operating system, antiguo), Chrome OS, Firefox IOS, Windows Mobile. (Android es linux).
+
+- ¿Que son los FIRMWARES?: Sistemas operativos pequeños que complen una función específica, como los que ocupan las lavadoras, los microondas, algunos hornos, incluso refrigeradores. Telefonos antiguos como los primeros nokia tenian firmware, debido a que el sistema operativo era muy pequeños.
+
+Sistemas operativos de la talla de microsoft o mac: Unix, BSD, Open BSD , FREE BSD, NOVELL, IBM, entre otros.
+
+Por el lado de linux, tiene millones de FORKS.
+
+Nota: Windows no es un Sistema operativo, es una DISTRIBUCIÓN. ¿Porque? Porque integra multiples softwares además del software del sistema operativo, por lo tanto el sistema operativo tiene la funcion de gestionar el hardware y el software.
+
+El usuario es la capa 8 de la PILA OSI, no existe pero se infiere ya que a veces los errores son causados por el mismo usuario.
+
 PILA OSI (Investigar)
 
-- Que tiene el S.O:
-  .Sistema de archivos: Software que gestiona como se guardan los archivos en el sistema.
-  .Interpretación de comandos:
-  .Núcleo:
+La BIOS es Basic Input Output System: La  BIOS es un FIRMWARE que se encarga del proceso de inicio del sistema, hoy en dia existe la UEFI BIOS que es mucho más rápida y solo detecta los cambios del hardware.
+
+El sistema de archivos es un software que se encarga de gestionar como almacenamos la información en los dispositivos de almacenamiento, adicional al sistema operativo.
 
 - Tipos:
-  .Para clientes: (Investigar)
-  .Para servidores: Para entregar servicios, herramientas, etc a los usuarios como compartir recursos, gestionar redes y hardware.
+  .Para clientes: 
+  .Para servidores: Entregar servicios, herramientas, etc a los usuarios como compartir recursos, gestionar redes y hardware.
+
+25:33
+
+Ambos 
