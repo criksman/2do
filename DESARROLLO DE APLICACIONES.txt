@@ -74,3 +74,5 @@ A los containers se les puede cambiar el color (Colors.lightGreen.shade200) (sha
 para añadir borders a los containers (decoration: BoxDecoration(border: Border.all(color:Colors.nombredelcolorxd, width: 3)))
 
 Para usar colores hexadecimales fuera de Colors se usa Color(codigo) (Singular sin la s)
+
+Maria muñoz secretaria académica.
