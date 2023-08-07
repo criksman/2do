@@ -118,6 +118,95 @@ para poner el resultado en la pantalla hacer otro container afuera del que estam
 (antes se pone globalmente una variable, String resultados = "";)
 child: Text(resultados),
 
+Codigo:
+
+import 'package:flutter/material.dart';
+
+class Lab3Page extends StatefulWidget {
+  const Lab3Page({super.key});
+
+  @override
+  State<Lab3Page> createState() => _Lab3PageState();
+}
+
+class _Lab3PageState extends State<Lab3Page> {
+  TextEditingController valorCtrl = TextEditingController();
+  TextEditingController montoCtrl = TextEditingController();
+  String calculoUsd = '';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Ejercicio clase 3"),
+        backgroundColor: Colors.red,
+      ),
+      body: Column(
+        children: [
+          Container(
+            color: Colors.red,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.paid,
+                  color: Colors.white,
+                ),
+                Text(
+                  'Conversor USD a CLP',
+                  style: TextStyle(color: Colors.white),
+                )
+              ],
+            ),
+          ),
+          Container(
+            child: Column(
+              children: [
+                TextFormField(
+                  controller: valorCtrl,
+                  decoration: InputDecoration(
+                    labelText: "Valor CLP de 1 USD",
+                    hintText: "0",
+                  ),
+                ),
+                TextFormField(
+                  controller: montoCtrl,
+                  decoration: InputDecoration(
+                    labelText: "Monto USD",
+                    hintText: "0",
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            child: FilledButton(
+              child: Text("Calcular CLP"),
+              onPressed: () {
+                int valor = int.tryParse(valorCtrl.text) ?? 0;
+                int monto = int.tryParse(montoCtrl.text) ?? 0;
+
+                int suma = valor + monto;
+
+                setState(() {
+                  calculoUsd = "SUMA: $suma";
+                });
+              },
+            ),
+          ),
+          Container(
+            child: Text(calculoUsd),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+
+
+
 
 
 Maria muñoz secretaria académica.
