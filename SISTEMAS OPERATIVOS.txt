@@ -37,4 +37,6 @@ El sistema de archivos es un software que se encarga de gestionar como almacenam
 
 25:33
 
+Clonar Y Realizar Snapshots de VMs
+
 Ambos 
