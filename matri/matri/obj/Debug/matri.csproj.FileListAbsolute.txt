@@ -1,0 +1,7 @@
+C:\Users\labinf\source\repos\matri\matri\bin\Debug\matri.exe.config
+C:\Users\labinf\source\repos\matri\matri\bin\Debug\matri.exe
+C:\Users\labinf\source\repos\matri\matri\bin\Debug\matri.pdb
+C:\Users\labinf\source\repos\matri\matri\obj\Debug\matri.csprojAssemblyReference.cache
+C:\Users\labinf\source\repos\matri\matri\obj\Debug\matri.csproj.CoreCompileInputs.cache
+C:\Users\labinf\source\repos\matri\matri\obj\Debug\matri.exe
+C:\Users\labinf\source\repos\matri\matri\obj\Debug\matri.pdb
