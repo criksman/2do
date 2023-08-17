@@ -204,9 +204,72 @@ class _Lab3PageState extends State<Lab3Page> {
   }
 }
 
+-----------------------------------------------------------------------------------------------
+
+los columns: no incluyen scrolls
+ListViews: scrolls en cualquier direccion
+
+pasos:
+-crear statelesswidget
+El listview tiene esta forma:
+ListView(
+  children:[
+    ListTile(
+      title: text('')
+      subtitle: Text('')
+      trailing: Container(
+        child: OutlinedButton(
+        )
+      leading: Icon.Icons,.....  //lo que uno desee
+      )
+    )
+    Divider(
+      thickness: 3,
+      color: Colors.lightBlue,
+    )
+  ]
+)
+
+ListTitle espera que title y subtitle sean text
+
+en leading y trailing se pueden poner cualquier cosa.
+M
+pub.dev-> material desing icons y usar material_design_icons_flutter, ejecutar comndo flutter en el terminal dentro del proyecto. se usan: Icon(MdiIcons.nombreDeIcono)<
+
+para que el listview pueda ocupar solo un pedazo de la pantalla, se pone dentro de un Expanded.
+
+------------------------------------
+|               title              |
+|leading                   trailing|
+|              subtitle            |
+------------------------------------
+
+Con esto simulamos que nos llega uuna lista de una api
+final alumnos=[
+  {'nombre':'alumno1'}
+  {'nombre':'alumno1'}
+  {'nombre':'alumno1'}
+];
+
+dentro del children del list view sacar los corchetes:
+
+children: alumnos.map((e) => null); -> conesto podemos generar una instancia liststyle por cada alumno.
+e es el puntero de la iteracion, se puede cambiar
+
+children: alumnos.map((alumno) {
+  return ListTile(
+    title: Text(alumno['nombre'].toString()) -> esto es porque no sabe que tipo de atributo es, por eso el toString.
+    subtitle: Text(alumno['otra propiedad'].toString())
+  );
+}).toList(),
 
 
+donde poner fotos? -> crear carpeta en la raiz del proyecto llamda 'assets' y dentro creamos carpeta llamada 'images'
 
+para ocuparlo
 
+Image(
+  image: AssetImage('assets/images/nombre del archivo.extension'),
+)
 
-Maria muñoz secretaria académica.
+ir a pubspec.yaml descomentar assets: y tener cuidado con la identacion y abajo de assets adentro poner '- assets/images/' (debe tener el ultimo slash, o si no va a tomar imagen como archivo)
