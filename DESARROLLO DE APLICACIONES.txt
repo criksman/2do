@@ -273,3 +273,33 @@ Image(
 )
 
 ir a pubspec.yaml descomentar assets: y tener cuidado con la identacion y abajo de assets adentro poner '- assets/images/' (debe tener el ultimo slash, o si no va a tomar imagen como archivo)
+
+
+---------------------------------------------------------------------------------------
+
+Vamos a generar un nuevo directorio dentro de lib llamado widgets (vamosa construir widgets para reutilizar, como los templates.)
+
+-Realizar widget a mostrar ahí.
+-Importarlo a la vista main.(normalmente es automatico)
+-Usarlo: Nombre(); donde se necesita.
+-ir a pub.dev -> buscar material design icons flutter e instalarlo con el metodo que desee.
+-desarrollar widget.
+-si vamos a trabajar en un column por defecto el texto dentro de los containers sale al centro... si se quiere cambiar->crossAxisAlignment.start
+-si se tiene tres elementos en un row, y quiero poner el primero a la izquierda, el segundo al centro y el tercero a la derecha se puede ocupar un alignmente spaceBetween o se puede ocupar un Spacer() entremedio de los elementos.<<
+-declarar nombre de los atributos al principio del class antes del override, se declaran como final (no pueden cambiar) en un stateless widget ya que no pueden cambiar, (en los stateful es lo contrario);
+
+Los finals pueden ser null y adquirir un valor.
+los const tienen que tener un valor inmediatamente cuando se declara., no puede ser null.
+
+-generar constructor de la clase (ProductoCard por ejemplo): ProductoCard();
+
+para poner argumentos en el constructor sin necesidad de posicion correcta:
+
+ProductoCard({this.nombre='',this.precio='',this.stock=''}) se le es asigna '' en el caso de que no se ingresen (null) y nose caiga.
+
+en las partes que se quiera poner la variable se ponen. recuerda ${} y \$, etc.
+
+se puede hacer un folder dentro de lib llamado constants y hacer un.dart que tenga la coleccion, luego importarla en la vista que se va a usar.
+
+los ListView tienen un atributo que se llama scrollDirection = Axis.Horizontal o Vertical para cambiar la direccion del scrolling.
+También Reverse que es un boolean y puede dar vuelta el scrolling para hacerlo para el otro lado.
