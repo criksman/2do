@@ -309,3 +309,64 @@ Al momento de ocupar el ListView con otros widgets que lo esten acompañando, se
 Para cambiar de color un botón: se le pone como atributo style.FilledButton.styleFrom(BackgroundColor: colors.fhdfh)
 
 Nota: si voy a hacer un container que tenga un box decoration, si el container usa color: este debo ponerlo dentro del boxdecoration o sino no va a funcionar.
+
+Codigo:
+import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: Icon(
+          MdiIcons.gamepadSquare,
+          size: 40,
+          color: Colors.deepOrange,
+        ),
+        title: Row(
+          children: [
+            Text('La Tiendita ', style: TextStyle(color: Colors.blue)),
+            Text(
+              'USM',
+              style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(7),
+                  color: Colors.orange,
+                  border: Border.all(width: 1, color: Colors.deepOrange)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Catálogo de juegos',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                  Icon(MdiIcons.gamepadVariant, color: Colors.white),
+                ],
+              ),
+            ),
+            Expanded(child: ListView(
+              
+              children: [
+
+              ],
+            ))
+          ],
+        ),
+      ),
+    );
+  }
+}
+
