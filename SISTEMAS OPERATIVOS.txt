@@ -39,4 +39,41 @@ El sistema de archivos es un software que se encarga de gestionar como almacenam
 
 Clonar Y Realizar Snapshots de VMs
 
-Ambos 
+Ambos
+---------------------
+requisitso paara servidor:
+- IP Fija 
+(la ip por def. es: la direccion de un equipo en una red, est puede ser publica o privada, en chile se ocupa la version 4 (ipv4), lo que se hace hoy es que hay multipledes ips privadas y todas estan estan conectadas a una ip publica. de esta manera la ip publica no se acaban. la ip publica de aca seria la de santiago. ahora las empresas tambien pueden tener ip publica donde todos sus dispositivos con ip privada se conectan a esa ip (esta asignacion de ip privada se llama DHCP (ip dinamica, es decir cada dia puede cambiar la ip.), por lo contrario esta la ip fija.))
+- Nombre maquina
+- Actualizaciones *
+- Clave *
+
+Ir a Servidor Local -> Ethernet -> propiedades desactivar protoolo ipv6.
+
+selecccionar protocolo ipv4-> propiedades -> setear ip si no se sabe cual es a 198.168.1.1, mascara de subred es automatica, puerta de enlace es la que da acceso a internet ( da lo mismo si ponerla o no ), ponemos 192.168.1.1
+
+en la mascara de subred en la parte de 255 significa que en la ip esa seccion no se puede cambiar, si esta en 0 significa que lo puedo cambiar hasta 255.
+
+Que funcion cumple el DNS (Cumple como la funcion del rut, es decir, identificar direcciones ip como aliases mas faciles. Asocia el nombre con una direrccion ip, por ejemplo google.cl)
+
+Cada empresa tiene un DNS que tiene una lista de todos los dominios que la empresa tiene. Esta DNS no esta fisicamente en la empresa sino que esta hosteada en alguno lado.
+
+Las empresas tiene un sistema de acache que esta local, esto permite que las conversaciones entre los dispositivos y el DNS sea mas rapida y no tenga que realizar todo el viaje para que el pc llegue a conversar con el dispositivo. esto es util cuando hay muchas personas interactuando con una pagina por ejemplo.
+
+Servidor de dns preferido: 192.168.1.1
+
+luego se cambia la descripcion y nombre del servidor: Nombre del equipo -> hacer click.
+
+ponemos ADServer (AD es de Active Directory) ->centraliza los dispositivos, en vez de hacer procesos individuales, poder automatizarlos (como por ejemplo instalar office en 300 computadores office con un solo click)
+
+servicicios de dominio de actie directory
+
+una vez llegad a promover controlador de dominio:
+
+Para hacer un active diretory se necesita establecer un dominio (¿ que es un dominio? posee multiples subdominios,(www.usmn.cl, notas.usm.cl, ftp.usm.cl)).
+
+Cuando una empresa compra otra empresa, pasa por ejemplo (usm.cl -><- utfsm.cl) se genera un bosque.
+
+seleccionamos agregar nuebo bosque y escribir su nombre.
+
+menu de inicio Usuarios y equipos de active directory
