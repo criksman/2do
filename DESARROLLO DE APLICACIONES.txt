@@ -307,3 +307,5 @@ También Reverse que es un boolean y puede dar vuelta el scrolling para hacerlo 
 Al momento de ocupar el ListView con otros widgets que lo esten acompañando, se tiene que poner el ListView dentro de un Expanded para evitar problemas.
 
 Para cambiar de color un botón: se le pone como atributo style.FilledButton.styleFrom(BackgroundColor: colors.fhdfh)
+
+Nota: si voy a hacer un container que tenga un box decoration, si el container usa color: este debo ponerlo dentro del boxdecoration o sino no va a funcionar.
