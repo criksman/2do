@@ -303,3 +303,7 @@ se puede hacer un folder dentro de lib llamado constants y hacer un.dart que ten
 
 los ListView tienen un atributo que se llama scrollDirection = Axis.Horizontal o Vertical para cambiar la direccion del scrolling.
 También Reverse que es un boolean y puede dar vuelta el scrolling para hacerlo para el otro lado.
+
+Al momento de ocupar el ListView con otros widgets que lo esten acompañando, se tiene que poner el ListView dentro de un Expanded para evitar problemas.
+
+Para cambiar de color un botón: se le pone como atributo style.FilledButton.styleFrom(BackgroundColor: colors.fhdfh)
