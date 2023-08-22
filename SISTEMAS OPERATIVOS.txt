@@ -92,6 +92,7 @@ Acciones de la clase:
 -correr las 2 maquinas.
 
 -Cambiar la ip de win 10 a una distinta, y la puerta de enlace y la mascara tiene que ser la misma que el server.
+El DNS Tiene que ser el mismo que el del server
 
 -configurar esquema empresa: En el server ir a usuarios y equipso de active directory.
 
