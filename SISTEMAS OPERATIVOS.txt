@@ -77,3 +77,26 @@ Cuando una empresa compra otra empresa, pasa por ejemplo (usm.cl -><- utfsm.cl) 
 seleccionamos agregar nuebo bosque y escribir su nombre.
 
 menu de inicio Usuarios y equipos de active directory
+
+
+--------------------------------------------------------------
+
+las UO son Unidades Organizativas -> agrupan conjunta un grupo de objetos dentro de active directory... (cualquier recurso e red: carpet,a camra, impresora, etc.)
+
+una unidad organizativa puede tener mutiples unidades organizativas. (informatica->seguridad,redes, etc).
+
+Acciones de la clase:
+
+-para unir 2 maquinas se necesita crear una red. -< ir a config de la vm ir a red e ir a habilitar adaptador red (conectado a: red interna, poner nombre y luego en avanzado poner permitir todo.) hacerla en ambas vms.
+
+-correr las 2 maquinas.
+
+-Cambiar la ip de win 10 a una distinta, y la puerta de enlace y la mascara tiene que ser la misma que el server.
+
+-configurar esquema empresa: En el server ir a usuarios y equipso de active directory.
+
+-click derecho en dominio -> nuevo -> unidad organizativa: Docentes, Alumnos, Administrativos, Informatica.
+
+-Dentro de udocentes hacer otra-> informatica.... y click derecho en informatica y crear usuario (rellenar datos y siguiente siguiente siguiente..., en ontraseña quitar opcion de cambio de contraseña).<
+
+-Ir al cliente, ir a las propiedades (domne aparecen los specs, click en cambiar configuracion y cambiar descripcion del nombre del equipo y click en el boton cambiar tambien y poner nombre de equipo y dominio (verificar que sean correctos)). -> se va a reiniciar el pc.
