@@ -370,3 +370,35 @@ class HomePage extends StatelessWidget {
   }
 }
 
+------------------------------------------------------------------------------------------
+
+
+MaterialPageRoute -> definir destino, ruta (a donde quiero ir)
+
+Navigator
+
+en las app moviles la pagina anterior no de desaparece, flutter lo almacena en la memoria y pone encima la nueva pagina, flutter pone las paginas como pilas.
+cuando hay mas de 1 pagina, flutter detecta esto y te da la opcion de volver.
+
+basicamente es un pop, push.
+
+
+para concatanar un atributo icono en el widget que se esta construyendo se usa final IconData icon.
+
+para ir a una pagina con un tap en un listTile -> onTap: (){}
+
+hay que pone rahora un atributo Widget -> final Widget? destino; (el ? es por caso de que sea null) y colocarlo en el constructor.  (en la pagina nueva)
+
+en donde van a ponerse los atributos -> Text(this.titulo??'Sin Titulo')  (en el caso de que sea null se pone sin titulo)
+
+y luego en la pagina principal poner en el atributo la pagina -> destino: BodegaPage().
+
+podemos tambien hacer lo siguiente (en la vista destino)
+
+if(this.destino!=null){
+  MaterialPageRoute ruta = MaterialPageRoute(builder: (context){ return this.destino!});  -> se le pasa context a builder y retorna el destino que se le da con un signo de excalamacion porque flutter piensa que destino puede ser null... pero como no puede entrar al if si es nul con el signo de exlamacion se obvia.
+}
+Navigator.push(context, ruta) -> en el caso que se programa un boton para volver deberia estar usando Navigator.pop(context)
+
+context es el que contiene el arbol de toda la aplicacion.
+
