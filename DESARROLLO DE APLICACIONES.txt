@@ -434,3 +434,20 @@ BottomNavigationBar() tiene un atributo currentIndex: paginaSeleccionada, tambie
 para que no se destruyan las paginas ya que las paginas quedarian no referenciadas cuando se cambian, haccer una lista con las paginas a ocupar de tal manera que quedan referenciadas todo el rato.
 
 se puede cambiar el type a .shifting para que se apliquen colores individuales.
+
+---------------------------------------
+
+Scaffold tiene atributo drawer:
+
+se le asigna Drawer() ->es como un container.
+
+en el caso de ponerlo a la derecha se pone endDrawer();
+
+este se le puede poner un ListTile por ejemplo.
+
+a los listview tienen un atributo se le puede poner un DrawerHeader que tiene como child un text(), esto es como un titulo.
+a este child se le puede poner un container con un decoration: BoxDecoration(shape:, border:, image: DecorationImage(image: AssetImage())). 
+
+los stack ordenan los widgets en el eje z.
+
+
