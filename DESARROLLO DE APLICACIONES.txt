@@ -450,4 +450,26 @@ a este child se le puede poner un container con un decoration: BoxDecoration(sha
 
 los stack ordenan los widgets en el eje z.
 
+-----------------Desarrollo desoftware-----------------------------
 
+-crear proyecto wpf, y 2 biblotecas de clases
+
+-añadir nugets a la solucion, añadir entity framework e instalarla a todos los proyectos
+
+-luego recompilar solucion (click derecho)
+
+-añadir nuevo elemento en proyecto datos, irse a elemnto data y agregar base de datos basada en servicio.
+
+-click derecho en ese elemento ahora ya creado, click derecho -> propiedades , seleccionar copiar si es posterior.
+
+-doble click en el mismo ahora y aparecera la base de datos a la izquierda.
+
+- si no aparece ir a ver (arriba) y seleccionar explorador de servidores.
+
+- doble click en tablas.
+
+- propiedades de la id, click derecho propiedades, irsea  especificacion de identidad y setear a gusto.
+
+- agregar elemento a proyeto datos ADO.NET ENTITY DATA MODEL.
+
+- en el asistente para entiy data model, seleccionar el primero., cuando pida seleccionar todas las tablas.
