@@ -473,3 +473,42 @@ los stack ordenan los widgets en el eje z.
 - agregar elemento a proyeto datos ADO.NET ENTITY DATA MODEL.
 
 - en el asistente para entiy data model, seleccionar el primero., cuando pida seleccionar todas las tablas.
+
+-------------------------------------
+en main abajo de home:
+
+poner routes: {
+  '/':(context) => Nav1Page()
+  '/':(context) => Nav2Page()   ->  hemos generado rutas... desde este momento no se puede ocupar el home:, asi que comentarlo
+},
+
+varaible de destino en widget  cambiarla a tipo String y el default seria un '/'.
+
+en el tile ir a destino y cambiarlo por el nombre de la ruta, ejemplo: '/bodega'.
+
+en le onTap, borrar la parte del MaterialPageRoute, todo el if si se el valor nunca va a ser null.<
+y agregar Navigator.pushNamed(context, '/nombrederuta'), como tenemos el destino de una variable,  entonces podria er (context, this.destino).
+
+
+///
+Dentro del onTap:
+//Duracion
+//construir ruta
+//definirtransicion
+
+PageRouteBuilder pageRouteBuilder = PageRouteBuilder(
+  TransitionDuration: Duration(seconds: 1) ,
+  PageBuilder: (context, animation,secondaryAnimation){
+    return this.destino!;   ->aqui no se hace lo de mas arriba que se cambia el widget por un string. se dejame como estaba. y se pone el signo de exclamacion para que no                                                                                                                                                     alegue se que no es null
+  },
+  TransitionBuilder: (context, animation, secondaryAnimation, child){ ->el child es lo que retorna el pagebuilder
+    return SlideTransition(
+      position: Tween(begin: Offset(-1,0), end: Offset(0,0)).animate(animation), ->para que sea el movimiento horizontal 0 es centor, -1 es full izquierda y 1 es full             child: child,                                                                derecha., verticalmente el -1 esta arriba
+    );
+  }
+
+);
+
+Navigator.push(context, pageRouteBuilder);
+
+initialRoute: '/',
