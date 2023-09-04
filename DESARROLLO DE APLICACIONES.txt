@@ -481,6 +481,7 @@ poner routes: {
   '/':(context) => Nav1Page()
   '/':(context) => Nav2Page()   ->  hemos generado rutas... desde este momento no se puede ocupar el home:, asi que comentarlo
 },
+initialRoute: '/',
 
 varaible de destino en widget  cambiarla a tipo String y el default seria un '/'.
 
@@ -510,5 +511,3 @@ PageRouteBuilder pageRouteBuilder = PageRouteBuilder(
 );
 
 Navigator.push(context, pageRouteBuilder);
-
-initialRoute: '/',
