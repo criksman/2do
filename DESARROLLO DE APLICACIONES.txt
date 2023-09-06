@@ -474,6 +474,19 @@ los stack ordenan los widgets en el eje z.
 
 - en el asistente para entiy data model, seleccionar el primero., cuando pida seleccionar todas las tablas.
 
+¿que hay que hacer con el appconfig?
+copiar ruta de la base de datos y pegarlo donde dice attachdbfile, y copiar el connectionString completo
+en el proyecto negocio agregar las bll
+
+en la clase : NombreBaseDeDatosEntities varialbe = new ''() como atributo
+
+metodos = -varialbe.Tabla.Add(cosa);
+          -''.SaveChanges();
+          -''.Where(puntero => puntero.nombre == nombre).FirstOrDefault();
+          -''.ToList()  -> en el caso que se quiera llevar toda la tabla para mostrarla.
+          -''.Remove(nombre);
+
+hernan saavedra yutub
 -------------------------------------
 en main abajo de home:
 
