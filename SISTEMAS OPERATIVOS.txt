@@ -101,3 +101,15 @@ El DNS Tiene que ser el mismo que el del server
 -Dentro de udocentes hacer otra-> informatica.... y click derecho en informatica y crear usuario (rellenar datos y siguiente siguiente siguiente..., en ontraseña quitar opcion de cambio de contraseña).<
 
 -Ir al cliente, ir a las propiedades (domne aparecen los specs, click en cambiar configuracion y cambiar descripcion del nombre del equipo y click en el boton cambiar tambien y poner nombre de equipo y dominio (verificar que sean correctos)). -> se va a reiniciar el pc.
+
+------------------------
+- Linux distrubye a traves de una licencia publica general GNU. Y es propiedad intelectual del creador.
+- el interprete de comandos , el usuario ingresa un comando y el computador le entrega una respuesta, o hace la accion. es la unica manera de que el usuario pueda utilizar el SO.
+- BASH es el interprete de comandos mas comun, se utiliza en linux y en windows.
+- Nota: Windows no es un Sistema operativo, es una DISTRIBUCIÓN. ¿Porque? Porque integra multiples softwares además del software del sistema operativo, por lo tanto el sistema operativo tiene la funcion de gestionar el hardware y el software.
+- linux es modular: cada uno de sus componentes estan separados en modulos, y el conjunto de estos dan la funcionalidad.
+- *investigar cada modulo*->kernel, boot loader, initialization framework, services, utilities*.
+- las principales destribuciones redhat, suse, debian. redhat es pagado pero solamente por el soporte.
+- suse es de los primeros para videojuegos y de los primeros que uncluia drivers de video.
+- GNU/Linux, integracion entre linux y todo el software libre generando todas las distribuciones de este.
+
