@@ -529,4 +529,8 @@ Navigator.push(context, pageRouteBuilder);
 
 UNIDAD 2
 
+en postman http://localhost:8000/api/pilotos y get
 
+Route::apiResource('/pilotos', PilotosController::class);
+
+php artisan route:list para ver las rutas generadas
