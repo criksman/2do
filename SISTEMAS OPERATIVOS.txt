@@ -113,3 +113,16 @@ El DNS Tiene que ser el mismo que el del server
 - suse es de los primeros para videojuegos y de los primeros que uncluia drivers de video.
 - GNU/Linux, integracion entre linux y todo el software libre generando todas las distribuciones de este.
 
+-----------------------------
+nombre@maquina directorio
+
+pwd -> printea el directorio actual, el primer slash es la raiz no es un divisor de ruta.
+ls -> lista el contenido de un directorio
+ls -l -> listado detallado
+ls --help -> casi cada comando tiene una ayuda
+ls -a -> muestra hasta los archivos ocultos (con un punto al principio)
+ls -al ->lo mismo pero detllado (se pueden juntar opciones)
+
+comandos -> ls -al /home/alumnos (comando opcion directorio)
+
+
