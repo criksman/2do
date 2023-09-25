@@ -118,11 +118,37 @@ nombre@maquina directorio
 
 pwd -> printea el directorio actual, el primer slash es la raiz no es un divisor de ruta.
 ls -> lista el contenido de un directorio
-ls -l -> listado detallado
+ls -l -> listado detallado (-ll es lo mismo pero acortado)
 ls --help -> casi cada comando tiene una ayuda
 ls -a -> muestra hasta los archivos ocultos (con un punto al principio)
 ls -al ->lo mismo pero detllado (se pueden juntar opciones)
 
 comandos -> ls -al /home/alumnos (comando opcion directorio)
 
+Linus es sensible para las mayúsculas y las minúsculas
+cd -> cambiar directorio
+cd - -> me devuelve al directorio anterior
+cd .. -> escalar hasta arriba el na jerarquia de archivos hasta llegar a la raiz
+cd . -> me lleva a donde estaba, ./install.exe -> ejectuar install.exe en esta carpeta, si ocupara .. es la carpeta anterior.
+mkdir nombre -> crear un directorio
+touch nombre.extension -> crear un archivo blanco
+rmdir nombre -> elimina el directorio
+mv archivo destino -> mover archivo 
 
+cambiar usuario -> su - 
+deslogear del admin -> exit
+
+cp archivo destino -> copiar (se puede hacer destino/otronombre y se copiaria con otro nombre pero es el mismo archivo)
+lo mismo con: mv
+
+rmdir destino -> elimina directorios vacios
+rm -> borrar archivos
+
+rm -r destino/ -> borrar recursivamente todo lo que hay a dentro y luego cago el pc.
+
+un directorio es un archivo de texto que configura rutas.
+
+id usuario
+whoami
+who
+history ->muestra todos los comandos ejecutados en consola
