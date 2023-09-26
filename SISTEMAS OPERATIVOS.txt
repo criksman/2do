@@ -152,3 +152,30 @@ id usuario
 whoami
 who
 history ->muestra todos los comandos ejecutados en consola
+
+_____________________
+
+en linux todo es manipulable ya que todo es un archivo
+
+en linux la entrada es STDIN , La salida del comando estandar es STDOUT y la otra es STDERR que es para errores.
+
+cal -> ver calendario
+
+cal > /dev/pts/1 (el output sale en otra ventana del terminal)
+
+la carpeta dev contiene todos los archivos que manipular los dispositivos
+
+echo "Hola Mundo!" > hola.txt (el comando echo es para  printear, y en este caso se redirecciona a un archivo de texto)
+
+para ver archivo de texto: less hola.txt
+si se pone >> agrega lineas de texto
+
+ls -aR / > archivos.txt (todos los archivos del so y los escribe en el archivo de texto que se creara)
+
+nano nombreDelArchivo.txt (nano es como el notepad. ^ es igual a control)
+
+en vim es lo mismo pero: para inserta se apreta la i
+para salir de insertar escape
+para salir con shift + : y se escribe Q, para guardar W, se puede q! para poder forzar la salida sin guardar cambios.
+
+un directorio es un archivo de configuracion que gestiona archivos.
