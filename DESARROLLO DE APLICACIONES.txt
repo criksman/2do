@@ -525,8 +525,9 @@ PageRouteBuilder pageRouteBuilder = PageRouteBuilder(
 
 Navigator.push(context, pageRouteBuilder);
 
-------------------------------------------------------------------------------------------------------------------------
 
+
+------------------------------------------------------------------------------------------------------------------------
 UNIDAD 2
 
 en postman http://localhost:8000/api/pilotos y get
@@ -534,3 +535,52 @@ en postman http://localhost:8000/api/pilotos y get
 Route::apiResource('/pilotos', PilotosController::class);
 
 php artisan route:list para ver las rutas generadas
+
+--------------------------------------------------------------------------------------------------------------------
+buscar e instalar http 1.1.0 en pub.dev (hace la funcion de postman pero desde codigo flutter)
+
+hacer otro directorio en lib llamado services y generar un archivo http_service.dart
+
+y dentro de ese archivo:
+
+import 'package:http/http.dart' as http;
+
+//esto es para no tener que escribir el principio de la url ya que nunca cambia.
+class HttpService{
+  final String apiUrl = 'http://10.0.2.2/api';
+  
+// de esta manera recibiermos la lista y no se freezeara la interfaz
+  Future<List<dynamic>< pilotos()async{
+    var respuesta =  await http.get(Uri.parse(apiUrl+'/pilotos'));
+    if (respuesta.statusCode==200){
+      return json.decode(respuesta.body); //importar dart:convert
+    }
+  }
+
+  return [];
+}
+
+para conectar el avd a el sistema anfitrion y posteriormente a la api en vez de localhost pusimos 10.0.2.2; esto es solo en un ambiente de desarrollo, y es porque el avd es un sistema separado del sistema donde esta el api.
+
+lo que hace el codigo de arriba es hacer el request y si la respuesta tiene el codigo 200 se hace un decode del body de la respuesta json.
+
+en la vista ahora:
+
+FutureBuilder(
+  future: HttpService().pilotos(),
+  builder: (context, AsyncSnapshot snapshot) {
+    if(!snapshot.hasData || snapshot.connectionState==ConnectionState.waiting){
+      //esperando datos, en el codigo del profe sale una manera de poner un ciruclo de carga
+    }else{
+      return ListView.builder(
+        itemCount: snapshot.data.length,
+        itemBuilder: (context, index){  //item builder itera
+          var piloto = snapshot.data[index];
+          return PilotoTile(
+            atributo: piloto['atributo'],
+          ),
+        },
+      );
+    }
+  }, //snapshot nos permite saber el estado del request con el api para poder hacer condiciones, ver repo del profe para el codigo
+)
