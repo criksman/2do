@@ -179,3 +179,39 @@ para salir de insertar escape
 para salir con shift + : y se escribe Q, para guardar W, se puede q! para poder forzar la salida sin guardar cambios.
 
 un directorio es un archivo de configuracion que gestiona archivos.
+
+--------------------------------------------------
+
+Sistema de archivos hace referencia a la forma en la que la info se organizará en el disco, definiendo como se realizarán las operaciones lectura/escritura, busquedas e indexación de datos, hay varios como FAT, NTFS (investigar que son).
+
+¿Que es formatear? es darle formato al dispositivo de almacenamiento. cuales son los formatos? FAT, NTFS, ETC.
+
+en linux: Ext2, Ext4, XFS
+
+¿Journaling?
+los inodes estan formados por: nombre, metadata, data.
+
+la metadata es por ejemplo: los permisos del archivo, cuando se modifico, etc.
+
+cada inode tiene un puntero a donde esta la data del archivo.
+
+existen formateos de alto nivel y bajo nivel. Cuando un formatea normalmente se elimina la estructura de los inodes, en cambio los de bajo nivel lleva a 0 cada sector del almacenamiento.
+
+en linux exsten 7 tipos de archivos.
+
+cuando se hace un listado detallado en linux "ls -l" la primera letra es el tipo de archivo, los otros 9 caracteres son los permisos del archivo (los primeros 3 son del user, los otros "el grupo dueño", y los ultimos 3 "otros usuarios" x = execute, w = escritura, r = lectura, - = no hay permiso), el numero es las formas de acceder al arcivo, luego el usuario dueño, el grupo dueño y la longitud. La fecha de ultima mod. y finalmente el nombre del archivo.
+
+los archivos solo deben tener 1 dueño y un grupo dueño. en linux.
+
+
+Los tipos de archivos mas comunes:
+
+  los que comienzan con "-" -> archivo regular, de uso común ejemplo un txt, mp3, etc.
+  "d" -> directorios, carpetas.
+  "l" -> archivos tipo enlace (accesos directos)
+
+los menos comunes:
+  "b" -> archivos de bloques (hacen referencia a dispositivos de almacenamiemtos.)
+  "c" -> archivos de caracter, referencia dispositivos de transferencia de informacion (mouse, audifonos, etc.)
+  "p" -> tuberias (comunicar procesos)
+  "s" -> socket (puertos de comunicacion
