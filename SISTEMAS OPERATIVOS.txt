@@ -215,3 +215,10 @@ los menos comunes:
   "c" -> archivos de caracter, referencia dispositivos de transferencia de informacion (mouse, audifonos, etc.)
   "p" -> tuberias (comunicar procesos)
   "s" -> socket (puertos de comunicacion
+
+el linux no se muestran los discos como C:, D:, E:. en linux cada directorio es un punto de montaje en el disco, no se podria saber con exactitud en que particion estoy.
+
+los dispositivos externos en linux conectados -> dentro de el directorio /run se crea una carpeta con el nombre del usuario, el nombre del dispositivo (todo temporal) como punto de pontaje para el dispositivo.
+
+por lo mismo se generaria un archivo de bloque sdb. si otro mas seria sdc y asi sucesivamente.
+
