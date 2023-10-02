@@ -222,3 +222,9 @@ los dispositivos externos en linux conectados -> dentro de el directorio /run se
 
 por lo mismo se generaria un archivo de bloque sdb. si otro mas seria sdc y asi sucesivamente.
 
+rutas absolutas -> direccion completa desde la raiz.
+rutas relativas -> asumen la ruta actual y solo se debe poner la ruta faltante.
+
+Ejercicio: crear un archivo llamado tareas.txt, dentro del directorio documentos. utilice la ruta relativa y absoluta para responder.
+
+al hacer una ruta relativa no se pone el primer slash o sino va a pensar que es el directorio raiz
