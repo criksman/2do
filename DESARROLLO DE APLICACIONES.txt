@@ -584,3 +584,6 @@ FutureBuilder(
     }
   }, //snapshot nos permite saber el estado del request con el api para poder hacer condiciones, ver repo del profe para el codigo
 )
+
+se pueden hacer widgets mas rapido ctrl + . en el widget y opcion extraer widget, luego este se puede copiar a otro archivo.
+
