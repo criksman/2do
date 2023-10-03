@@ -256,3 +256,5 @@ groupadd metaleros -> agregar grupos
 usermod -aG metaleros bulma -> agregamos a bulma al grupo de metaleros (con la a agregegamos)
 
 chgrp metaleros cosas.txt -> cambiar el grupo del archivo
+
+ll ruta es ára listar
