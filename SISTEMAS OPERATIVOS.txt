@@ -228,3 +228,9 @@ rutas relativas -> asumen la ruta actual y solo se debe poner la ruta faltante.
 Ejercicio: crear un archivo llamado tareas.txt, dentro del directorio documentos. utilice la ruta relativa y absoluta para responder.
 
 al hacer una ruta relativa no se pone el primer slash o sino va a pensar que es el directorio raiz
+
+---‐----------------------
+
+chmod -> modifica los permisos de un archivo
+chmod a= cosas.txt -> le quito todos los permisos a todos los usuarios
+
