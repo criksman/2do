@@ -230,7 +230,29 @@ Ejercicio: crear un archivo llamado tareas.txt, dentro del directorio documentos
 al hacer una ruta relativa no se pone el primer slash o sino va a pensar que es el directorio raiz
 
 ---‐----------------------
+chmod u(USER) g(GROUP) o(OTHERS)+r w x archivo.txt
+
+u=6 
+g=4 
+o=0 
+
+r=4 
+w=2 
+x=1 
+
+se pueden sumar
+
+chmod 444 punchipunchi.mp3 -> agregar permisos a todos los usuarios de lectura sobre el archivo
 
 chmod -> modifica los permisos de un archivo
 chmod a= cosas.txt -> le quito todos los permisos a todos los usuarios
+chmo ug+rw archivos.txt ->agregar read and write a un archivo
 
+chown -> solo funciona siendo root, cambiar owner del archivo
+
+chown bulma cosas.txt  -> ahora bulma es el dueño
+
+groupadd metaleros -> agregar grupos
+usermod -aG metaleros bulma -> agregamos a bulma al grupo de metaleros (con la a agregegamos)
+
+chgrp metaleros cosas.txt -> cambiar el grupo del archivo
