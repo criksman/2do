@@ -587,3 +587,27 @@ FutureBuilder(
 
 se pueden hacer widgets mas rapido ctrl + . en el widget y opcion extraer widget, luego este se puede copiar a otro archivo.
 
+
+-------------------------------------------
+
+despues de programar el request, en el client en http service cambiar el void de la funcion agregar a Future<LinkedHashMap<String,dynamic>> (esto es por que al momento deretornar los errores, como se puede ver nombre, puntos, etc son strings pero sus valores cambian. verlo con postman para entender)
+
+si la respuesta del api empieza con [] es un List
+si la respuesta del api empieza con {} el tipo de dato es LinkedHashMap
+
+guardar el post en una variable
+
+y retornarlo al final (return json.decode(respuesta.body))
+
+ir al campo_form para ver como puso los errores en la vista
+
+luego modificar el onpressed de agregar, poner el request en una variable respuesta ya que de esa manera podemos saber si podemos quedarnos en la página y mostrar los errores o no y proceder con el pop.
+
+como accedo a los errores dentro de la respuesta: respuesta['errors']['numero']
+
+los errores se ponen arriba de toda la vista ya que las variables que se sacan del onpressed vivan ahí nomas, entonces hay que hacerlas globales.
+
+
+
+
+
