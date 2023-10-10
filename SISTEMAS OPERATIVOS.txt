@@ -258,3 +258,13 @@ usermod -aG metaleros bulma -> agregamos a bulma al grupo de metaleros (con la a
 chgrp metaleros cosas.txt -> cambiar el grupo del archivo
 
 ll ruta es ára listar
+
+add users
+mkdir /publicidad
+chown pedro /publicidad
+groupadd diseñador
+chgrp diseñador /publicidad
+usermod -aG diseñador juan
+touch /publicidad/recetas.txt
+chmod o+w /publicidad/recetas.txt
+chmod g+rwx /publicidad
