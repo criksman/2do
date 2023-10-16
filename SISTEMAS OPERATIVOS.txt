@@ -271,7 +271,42 @@ chmod g+rwx /publicidad
 
 
 -------------------------------------------------------------
+umask
 
 en /dev/ estanj todos los dispositivos del pc
 
-dentro de este sda (sata disk) 
+dentro de este sda (sata disk y letra del abecedario) 
+
+fdisk /dev/sdb -> ejemplo de formateo
+
+m -> para ayuda
+
+n -> para crear nueva partición
+
+enter
+
+ingresar numero de particion (1 es valor predeterminado)
+
+si escribo +15g al momento de establecer ultimo sector estaria haciendo una particion de 15gb
+
+despues puedo escribir n denuevo y seguir haciendo particiones, si pongo enter  usa todo el sector que quede.
+
+con la letra p se puede ver las particiones de manera detallada
+
+para guardar los cambios realizados escribir "w"
+
+para darle formato ahora se usa -> mkfs (make file system)
+
+mkfs -t ext4 o se puede ocupar tambien xfs
+
+mkfs -t xfs /dev/sdb1 -> formateo con xfs a la particion uno del disco b
+
+el ultimo paso es crear puntos de montaje: 
+mkdir /peliculas
+mkdir /evaluacion
+mount /dev/sdb1 /peliculas
+mount /dev/sdb2 /evaluacion/
+
+con -> df
+
+se puede ver en donde estan montados los dispositivos
