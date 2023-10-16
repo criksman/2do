@@ -310,3 +310,16 @@ mount /dev/sdb2 /evaluacion/
 con -> df
 
 se puede ver en donde estan montados los dispositivos
+
+blkid /dev/sdb1 -> Da el UUID el cual es unico para cada particion, se copia y se pega en un archivo de texto en /etc/fstab
+
+esto se podria hacer como por ejemplo directamente con vim -> vim /etc/fstab para editar fstab
+
+agregar una linea al final del archivo y pegar: UUID=MontonDeNumeros /peliculas xfs defaults 0 0
+
+el espacio entre el directorio el formato y dwfaults es con tabulador.
+
+otra forma : blkid /dev/sdb2 >> /etc/fstab , y luego editar el fstab para que quede igual que el metodo anterior.
+
+(hay que hacer esto para cada particion)
+
