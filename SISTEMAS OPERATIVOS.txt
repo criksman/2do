@@ -268,3 +268,10 @@ usermod -aG diseñador juan
 touch /publicidad/recetas.txt
 chmod o+w /publicidad/recetas.txt
 chmod g+rwx /publicidad
+
+
+-------------------------------------------------------------
+
+en /dev/ estanj todos los dispositivos del pc
+
+dentro de este sda (sata disk) 
