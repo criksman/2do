@@ -607,7 +607,10 @@ como accedo a los errores dentro de la respuesta: respuesta['errors']['numero']
 
 los errores se ponen arriba de toda la vista ya que las variables que se sacan del onpressed vivan ahí nomas, entonces hay que hacerlas globales.
 
+---------------------------------------------
 
+con los modelos podemos ahorrarnos codigo guardando los atributos en una clase y usandolos donde sea necesario por ejemplo en un list view
 
+en el .then dentro de un setState tiene lo que retorna el valor de retorna de la funcion en la que se aplicó.
 
-
+lo de arriba sirve para programar snackbars y confirmdialogs.
