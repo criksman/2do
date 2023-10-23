@@ -614,3 +614,14 @@ con los modelos podemos ahorrarnos codigo guardando los atributos en una clase y
 en el .then dentro de un setState tiene lo que retorna el valor de retorna de la funcion en la que se aplicó.
 
 lo de arriba sirve para programar snackbars y confirmdialogs.
+
+
+--------------------------------------------
+
+dismissable -> borrar tirando el tile para un lado
+
+envolver el tile in con  Dusmissable con -> key: id de la mascota, direction: direccion a desplazar, child: el tile, onDismissed: (direction){ } accion una vez movido ( como el onpressed), background: Container() (lo que se ve detras del tile cuando se esta moviendo., cuando se mueve de izquierda a derecha se ocupa secondaryBackground)
+
+flutter slidable en pub.dev e instalar
+
+ver implementacion de slidable en pacientes3 del profesor.
