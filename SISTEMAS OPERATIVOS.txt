@@ -323,3 +323,54 @@ otra forma : blkid /dev/sdb2 >> /etc/fstab , y luego editar el fstab para que qu
 
 (hay que hacer esto para cada particion)
 
+
+---------------------------------------------------------adfkspdgogpfdsjd0gdofhpdhpdhpdhjdlfhpsdh-------------------------------------------------
+
+ping -c4 www.google.cl       -> 4 es el numerode veces que vamos a pingear.
+
+dnf install httpd
+
+systemctl (start|stop|restart|reload|enable|disable|status) servicio
+
+systemctl start httpd
+systemctl start enable httpd -> habilitar para que empieze automaticamente si se reinicia el sistemna o cuando lo prenda.
+
+en el navegador 127.0.01 o localhost
+
+para encontrar ip publica en la consola -> ipaddr
+
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --reload
+
+cd /var/www/html/ -> aqui se almacenan las paginas web, crear una con touch y editarlo con editor que quiera.
+
+setenforce 0 -> para poder ocupar imagenes dentro de la vista
+
+dnf install -y vsftpd   (verisure ftp para servicios ftp, el y es para que acepte todo de una)
+
+systemctl start vsftpd
+systemctl enable vsftpd
+systemctl status vsftpd
+
+con lo anterior partimos el servicio, lo activamos y verificamos el status para ver si esta corriendo.
+
+vim o nano /etc/vsftpd/vsftpd.conf   -> editamos la configuracion del servicio ftp que acabamos de instalar, nos vamos a donde dice anonymous_enable y lo ponemos en YES
+systemctl restart vsftpd
+
+
+firewall-cmd --permanent add-service=ftp
+firewall-cmd --reload
+con eso le damos permiso al servicio ftp mediante el firewall
+
+dnf install -y epel-release 
+dnf install -y filezilla
+
+abrimos filezilla
+
+cd /var/ftp/pub/ ->ruta compartida dentro de la red y usado por filezilla
+
+dnf install -y mariadb-server
+systemctl start mariadb
+systemctl enable mariadb
+mysql_secure_installation   -> para que funcione de manera segura y correcta (investigar comando)
