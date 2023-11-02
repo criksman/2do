@@ -625,3 +625,38 @@ envolver el tile in con  Dusmissable con -> key: id de la mascota, direction: di
 flutter slidable en pub.dev e instalar
 
 ver implementacion de slidable en pacientes3 del profesor.
+
+--------------------------------------------------
+
+los textformfield tienen un atributo validator donde se especifican validaciones.
+
+para que esto funcione se necesita que todo este englobado dentro de un form con una key establecida.
+
+luego en el botón pressed se program para que haga uso de este usando la key del form.
+
+una vez echo la cosa de firebase irse a android/app/build.grade y irse dentro de defaultConfig y cambiar el application id com.nombredelacompañia.nombredelproyecto, copiar esto y pegarlo en agregar firebase a tu app en donde dice nombre del paquete de android. Descargar el google-services.json y pegarlo en la carpeta en donde estabamos.
+
+en el buid.gradle en el mismo lugar agregar otra linea: multiDexEnabled true
+
+antes de android ahora escribir: apply plugin "com.google.gms.google-services"
+
+volver a la pagina y copiar la linea despues de dependencies en el punto 2.
+
+pegarlo en el respectivo lugar en build.gradle pero de android/  y agregar otro classpath "com.google.gms:google-services:4.3.15"
+
+y darle a guardar cambios en la pagina
+
+instalar firebase_core , cloud_firestore , firebase_auth en pub.dev
+
+irse a pubspec.yaml si se hace una aplicacion IOS se ocupa cupertino, asi que lo dejamos al final para que no surgan problemas, vamos a main y lo convertimos en async al void main() y en la primera linea dentro del void main poner: await Firebase.initializeApp();
+
+
+crear base de datos en firebase
+
+comenzar en modo de prueba
+
+iniciar coleccion
+
+id automatico, ingresar el campo, tipo y valor
+
+
