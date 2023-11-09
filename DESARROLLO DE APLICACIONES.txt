@@ -659,4 +659,26 @@ iniciar coleccion
 
 id automatico, ingresar el campo, tipo y valor
 
+---------------------------------------------------------
+
+funciona parecido a como lo haciamos antes
+
+- importar cloud firestore (import 'package:cloud_firestore/cloud_firestore.dart')
+- realizar una clase
+- para realizar un stream generar método: Stream<QuerySnapshot> estudiantes(){
+                                            return FireBase.instance.collection('estudiantes').snapshots();
+                                          }
+- en vez de futurebuilder se ocupa StreamBuilder y no hay future, hay un 'stream: '
+- al momento de establecer el tipo de dato del snapshot, seria AsyncSnapshot<QuerySnapshot>
+- al itemCount seria snapshot.data.docs.length
+- para ir iterando por cada indice del docs se hace: snapshot.data!.docs[index];
+- tambien se puedes hacer que retiorne un future en vez de un stream como lo haciamos antes con un get
+- en pub.dev existe intl que sirve para formtear, se ocupa en la vista estudiante agregar
+- para cambiar el idioma de la ap en pubsec.yaml agregar a las dependencias: flutter_localization:
+                                                                                sdk: flutter
+-en main.dart en el widget root poner al principio dentro del return MaterialApp() -> localizationsDelegates: [GlobalWidgetsLocalizations.delegate],
+                                                                                      supportedLocales: [Locale('es')]
+- todo esto para poder poner atributo locale: dentro de showDatePicker()
+- en pub.dev importar slidable para hcer tiles con slidable duuh
+- cuando se borra se ocupa el document id, ya que no hay clave primaria
 
