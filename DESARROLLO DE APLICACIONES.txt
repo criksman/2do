@@ -682,3 +682,16 @@ funciona parecido a como lo haciamos antes
 - en pub.dev importar slidable para hcer tiles con slidable duuh
 - cuando se borra se ocupa el document id, ya que no hay clave primaria
 
+------------------------------------------------------------
+
+si pongo radios en un row, cada row tiene que ir dentro de un expanded.
+los radios se ocupan con RadioListTile()
+lo que se selecciona depende de el value el cual debe ser una variable global.
+
+para dropdown button seria un DropdownButtonFormField<TipoDeDato>(decoratio:, items: [DropdownMenuItem<MismoTipoDeDato>()], onChanged: (){})
+tiene que ser el mismo tipo de dato dos veces ya que se asume que el onchanged puede hacer cualquier cosa como cambiar el tipo de dato con lo que estamos trabajando.
+
+en el servicio, cuando se quiere devolver un future tiene que ser .get().
+
+dentro de los dropdown no hay constructor builder, sino que hy que hacer un map para mostrar cosas de una lista.
+
