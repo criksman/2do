@@ -695,3 +695,27 @@ en el servicio, cuando se quiere devolver un future tiene que ser .get().
 
 dentro de los dropdown no hay constructor builder, sino que hy que hacer un map para mostrar cosas de una lista.
 
+----------------------------------------------------
+
+en firebase ir a authentication y activarlo.
+
+instalar provider 6.1.1 en pub.dev
+crear otra clase en services en otro archivo como auth_service.dart.
+crear un metodo que cree una instancia del usuario
+
+el método retorn auna instancia de User pero como puede retornar null en caso de que no reconozco se utiliza User?
+
+en main.dart envolver MaterialApp en un widget que se llame StreamProvider<User?>.value
+
+dentro de eso agregar atributo initialData: null (nosé porque)
+value: AuthService().usuario
+
+ahora crear vistas para iniciar sesion
+en esta almacenar en una variable final llamada usuario el cual llame al metodo del AuthService -> final usuario = Provider.of<User?>(context);
+
+y dependiendo de esa variable cargamos la página respectiva o lo llevamos dnuevo al login.
+
+en la vista para iniciar sesion de verdad en un onpressed de un botón se llama await FirebaseAuth.instance.signInWithEmailAndPassword(email: , password:,) los email y password se sacan de los controllers. envolver esto en un try catch (cuando catchea un error capturar el mensaje del error)
+
+para cerrar sesion el boton gatillaria FirebaseAuth.instance.signOut();
+
